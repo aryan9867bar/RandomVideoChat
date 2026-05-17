@@ -394,7 +394,7 @@ Alice                   Signalling Svc              Bob
 ## Frontend Repository
 The React + WebRTC frontend lives in a separate repository:
 
-**https://github.com/aryan9867bar**
+**https://github.com/aryan9867bar/randomvideochat-web**
 
 Point the frontend environment variables at:
 - Matching Service: `ws://localhost:8000`
