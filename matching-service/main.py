@@ -20,7 +20,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-REDIS_URL = os.environ.get("REDIS_URL", "redis://127.0.0.1:6379")
+# REDIS_URL = os.environ.get("REDIS_URL", "redis://127.0.0.1:6379") // local
+REDIS_URL = os.environ.get("redis://red-d88nho6l51nc73fmrocg:6379")
 redis_client = redis.Redis.from_url(REDIS_URL, decode_responses=True)
 MATCH_QUEUE = "matching_queue"
 INITIAL_BACKOFF = 0.01      # seconds
