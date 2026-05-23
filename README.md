@@ -114,6 +114,7 @@ The Signalling Server handles **WebRTC session setup** and **real-time messaging
 - Low latency communication  
 
 ---
+
 ## Prerequisites
 
 | Tool | Version | Notes |
@@ -160,6 +161,7 @@ uvicorn main:app --port 8001 --reload
 Both services default to `redis://127.0.0.1:6379`. Override via the `REDIS_URL` env var if needed.
 
 ---
+
 ## Quick Start — Docker (Recommended)
 
 ```bash
