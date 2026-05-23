@@ -22,7 +22,7 @@ app.add_middleware(
 
 # Redis connection (from first MS)
 # REDIS_URL = "redis://127.0.0.1:6379"  // local
-REDIS_URL = os.environ.get("REDIS_URL", "redis://red-d88nho6l51nc73fmrocg:6379")
+REDIS_URL = os.environ.get("REDIS_URL", "redis://127.0.0.1:6379")
 redis_client = redis.Redis.from_url(REDIS_URL, decode_responses=True)
 
 def verify_room_and_role(room_code: str, user: str, peer: str, is_initiator_attempt: bool) -> bool:
