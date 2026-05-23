@@ -114,6 +114,16 @@ The Signalling Server handles **WebRTC session setup** and **real-time messaging
 - Low latency communication  
 
 ---
+## Prerequisites
+
+| Tool | Version | Notes |
+|------|---------|-------|
+| Docker & Docker Compose | ≥ 20 / ≥ 2 | Easiest path |
+| **— or —** | | |
+| Python | 3.11+ | For local run |
+| Redis | 7+ | Must be running on port 6379 |
+
+---
 
 ## Quick Start — Local (No Docker)
 
@@ -148,6 +158,34 @@ uvicorn main:app --port 8001 --reload
 ```
 
 Both services default to `redis://127.0.0.1:6379`. Override via the `REDIS_URL` env var if needed.
+
+---
+## Quick Start — Docker (Recommended)
+
+```bash
+# 1. Clone / unzip the project
+git clone <your-repo-url>
+cd random-video-chat
+
+# 2. Start all three services (Redis + Matching + Signalling)
+docker compose up --build
+
+# Services will be available at:
+#   Matching Service   → http://localhost:8000
+#   Signalling Service → http://localhost:8001
+```
+
+To run in the background:
+
+```bash
+docker compose up --build -d
+```
+
+To stop everything:
+
+```bash
+docker compose down
+```
 
 ---
 
